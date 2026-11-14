@@ -1,4 +1,3 @@
-   
 :root {
     --fondo: #100d18;
     --secundario: #211a2e;
@@ -33,6 +32,7 @@ h1, h2, h3, nav {
 a {
     color: var(--acento);
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 header {
@@ -44,12 +44,18 @@ header {
     flex-wrap: wrap;
     gap: 1rem;
     border-bottom: 0.15rem solid var(--acento);
+    transition: background-color 0.3s ease;
 }
 
 .logo {
     color: var(--acento);
     font-size: 1.5rem;
     font-weight: 700;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
 }
 
 nav {
@@ -61,11 +67,12 @@ nav {
 nav a {
     color: var(--texto);
     font-size: 0.9rem;
-    transition: color 0.3s;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 nav a:hover {
     color: var(--acento);
+    transform: translateY(-0.15rem);
 }
 
 .portada {
@@ -99,6 +106,7 @@ nav a:hover {
 
 .portada h1 span {
     color: var(--acento);
+    transition: color 0.3s ease;
 }
 
 .portada p {
@@ -114,12 +122,13 @@ nav a:hover {
     padding: 0.8rem 1.5rem;
     border-radius: 0.5rem;
     font-weight: 700;
-    transition: 0.3s;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .boton:hover {
     background-color: var(--texto);
     transform: translateY(-0.2rem);
+    box-shadow: 0 0 1rem #a879ff66;
 }
 
 .imagen-portada {
@@ -130,12 +139,23 @@ nav a:hover {
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 0 2rem #a879ff33;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.imagen-portada:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 2.5rem #a879ff66;
 }
 
 .imagen-portada img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.imagen-portada img:hover {
+    transform: scale(1.05);
 }
 
 section {
@@ -149,6 +169,11 @@ section {
     margin-bottom: 1.5rem;
     border-left: 0.3rem solid var(--acento);
     padding-left: 1rem;
+    transition: padding-left 0.3s ease;
+}
+
+.titulo-seccion:hover {
+    padding-left: 1.4rem;
 }
 
 .descripcion {
@@ -172,6 +197,12 @@ section {
     padding: 1.3rem;
     border-radius: 0.7rem;
     border-bottom: 0.2rem solid var(--acento);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dato:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0 1rem #a879ff44;
 }
 
 .dato h3 {
@@ -195,11 +226,12 @@ section {
     background-color: var(--secundario);
     padding: 1.5rem;
     border-radius: 0.8rem;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tarjeta:hover {
     transform: translateY(-0.3rem);
+    box-shadow: 0 0 1rem #a879ff44;
 }
 
 .tarjeta h3 {
@@ -221,6 +253,12 @@ section {
     padding: 2rem;
     border-radius: 0.8rem;
     border-left: 0.3rem solid var(--acento);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.relacion-contenido:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 0 1rem #a879ff33;
 }
 
 .relacion-contenido h3 {
@@ -246,6 +284,13 @@ section {
     border-radius: 0.5rem;
     border-left: 0.2rem solid var(--acento);
     color: var(--texto-suave);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.curiosidades li:hover,
+.Otros li:hover {
+    transform: translateX(0.3rem);
+    background-color: var(--tarjeta);
 }
 
 .curiosidades li::before,
@@ -253,8 +298,6 @@ section {
     content: "✦ ";
     color: var(--acento);
 }
-
-/* Elementos multimedia dentro de las listas */
 
 .curiosidades .media-item,
 .Otros .media-item {
@@ -270,6 +313,11 @@ section {
 .media-item img {
     max-width: 100%;
     height: auto;
+    transition: transform 0.3s ease;
+}
+
+.media-item img:hover {
+    transform: scale(1.03);
 }
 
 .media-item audio {
@@ -286,6 +334,7 @@ footer {
 
 footer strong {
     color: var(--acento);
+    transition: color 0.3s ease;
 }
 
 .volver-arriba {
@@ -300,6 +349,13 @@ footer strong {
     color: white;
     border-radius: 50%;
     text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.volver-arriba:hover {
+    transform: translateY(-0.3rem);
+    background-color: var(--texto);
+    box-shadow: 0 0 1rem #a879ff66;
 }
 
 @media (max-width: 48rem) {
